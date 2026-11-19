@@ -1,25 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="sw">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jeyvan WiFi</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign in to WAVLINK-AX_Jeyvan</title>
 <style>
-body{font-family:Arial;text-align:center;background:#0f172a;color:white;padding:20px}
-.box{background:white;color:black;border-radius:15px;padding:20px;margin-top:20px}
-button{background:#22c55e;color:white;border:none;padding:15px 25px;border-radius:10px;font-size:18px;width:100%;margin:10px 0}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#000;color:#fff;padding:12px;padding-bottom:30px}
+.top{text-align:center;padding:10px 0 5px;color:#aaa}
+.top b{color:#fff;font-size:16px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+.card{border:2px solid #facc15;border-radius:12px;padding:16px 8px;text-align:center;background:#111}
+.card.blue{border-color:#3b82f6}
+.card h2{font-size:19px;color:#facc15}
+.card.blue h2{color:#60a5fa}
+.card p{font-size:11px;color:#ddd;margin:8px 0}
+.btn{display:block;background:#facc15;color:#000;font-weight:900;font-size:11px;padding:10px 4px;border-radius:6px;text-decoration:none;margin-top:8px}
+.blue .btn{background:#3b82f6;color:#fff}
+.yellow-box{background:#fef08a;color:#000;border-radius:10px;padding:12px;text-align:center;margin:12px 0}
+.box{border:2px solid #facc15;border-radius:12px;padding:14px;margin:12px 0;background:#111}
+.box.blue{border-color:#3b82f6}
+.box h3{font-size:13px;color:#facc15;margin-bottom:12px}
+.box.blue h3{color:#60a5fa}
+input,select{width:100%;padding:13px;border-radius:8px;border:1px solid #444;background:#222;color:#fff;margin-bottom:10px}
+.btn-big{display:block;text-align:center;background:#facc15;color:#000;font-weight:900;padding:14px;border-radius:8px;text-decoration:none}
+.box.blue .btn-big{background:#3b82f6;color:#fff}
+.footer{text-align:center;color:#888;font-size:11px;margin-top:15px}
 </style>
 </head>
 <body>
-<h1>JEYVAN WIFI</h1>
-<p>Internet ya Kasi • Dar es Salaam</p>
-<div class="box">
-<h2>Chagua Kifurushi</h2>
-<button>Masaa 7 - Tsh 500</button>
-<button>Siku 1 - Tsh 1000</button>
-<button>Wiki 1 - Tsh 5000</button>
-<button>Mwezi 1 - Tsh 15000</button>
-<p><b>Lipa kwa ZenoPay</b><br>M-Pesa / Tigo Pesa / Airtel Money</p>
-<button style="background:#2563eb">LIPA SASA NA ZENOPAY</button>
+<div class="top"><b>📶 JEYVAN STUDIO</b><br>WiFi ya Haraka</div>
+<div class="grid">
+<a href="https://wa.me/255689211924?text=Habari%20JEYVAN!%20Nataka%20SAA%207" style="text-decoration:none"><div class="card"><h2>500 TSH<br>SAA 7</h2><p>✓ Data bila kikomo<br>Up to 10Mbps</p><span class="btn">👉 BONYEZA HAPA KULIPA</span></div></a>
+<a href="https://wa.me/255689211924?text=Habari%20JEYVAN!%20Nataka%20SIKU%201" style="text-decoration:none"><div class="card blue"><h2>1000 TSH<br>SIKU 1</h2><p>✓ Data bila kikomo<br>Up to 20Mbps</p><span class="btn">👉 BONYEZA HAPA KULIPA</span></div></a>
+<a href="https://wa.me/255689211924?text=Habari%20JEYVAN!%20Nataka%20WIKI" style="text-decoration:none"><div class="card"><h2>5000 TSH<br>WIKI</h2><p>✓ Data bila kikomo<br>Up to 40Mbps</p><span class="btn">👉 BONYEZA HAPA KULIPA</span></div></a>
+<a href="https://wa.me/255689211924?text=Habari%20JEYVAN!%20Nataka%20MWEZI" style="text-decoration:none"><div class="card blue"><h2>15000 TSH<br>MWEZI</h2><p>✓ Data bila kikomo<br>Up to 50Mbps</p><span class="btn">👉 BONYEZA HAPA KULIPA</span></div></a>
 </div>
+<div class="yellow-box"><b>🕒 DATA BILA KIKOMO</b><p>Hakuna kikomo cha data. Tumia bila kikomo kwa muda uliochagua.</p></div>
+<div class="box"><h3>🔒 INGIA KWA CODE YA VOCHA</h3><input type="text" placeholder="Weka code ya vocha"><a class="btn-big" href="https://wa.me/255689211924?text=Habari%20JEYVAN!%20Nina%20code">INGIA</a></div>
+<div class="box blue"><h3>💳 LIPA SASA - PATA CODE MOJA KWA MOJA</h3>
+<select id="kifurushi">
+<option value="" selected disabled>Chagua Kifurushi ▼</option>
+<option value="500 TSH - SAA 7">500 TSH - SAA 7</option>
+<option value="1000 TSH - SIKU 1">1000 TSH - SIKU 1</option>
+<option value="5000 TSH - WIKI">5000 TSH - WIKI</option>
+<option value="15000 TSH - MWEZI">15000 TSH - MWEZI</option>
+</select>
+<input id="namba" type="text" placeholder="Weka namba 07XX XXX XXX">
+<a class="btn-big" href="#" onclick="endaWhatsApp();return false;">LIPA SASA</a>
+</div>
+<div class="footer">JEYVAN STUDIO WiFi<br>© 2026 - Huduma ya Haraka na ya Uhakika</div>
+<script>
+function endaWhatsApp(){
+  var k = document.getElementById('kifurushi').value;
+  var n = document.getElementById('namba').value;
+  if(!k){ alert('Tafadhali chagua kifurushi kwanza'); return; }
+  var msg = "Habari JEYVAN! Nataka " + k + ". Namba yangu ni " + n;
+  window.location.href = "https://wa.me/255689211924?text=" + encodeURIComponent(msg);
+}
+</script>
 </body>
 </html>
